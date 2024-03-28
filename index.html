@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Продажа деревянных разделочных досок и менажниц</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
 </head>
 <body>
     <header>
@@ -39,20 +41,15 @@
                 <button onclick="addToCart('Деревянная разделочная доска', 25)">Добавить в корзину</button>
             </div>
             <div class="product-image">
-                <img src="images/one.png" alt="Деревянная разделочная доска">
-            </div>
-            <div class="gallery">
-                <img src="images/one.png" alt="Image 1" class="gallery-image">
-                <img src="images/two.png" alt="Image 2" class="gallery-image">
-                <img src="images/three.png" alt="Image 3" class="gallery-image">
-                <!-- Добавьте сколько угодно изображений -->
-            </div>
-            
-            <!-- Модальное окно для отображения увеличенных изображений -->
-            <div id="modal" class="modal">
-                <span class="close">&times;</span>
-                <img id="modal-image" class="modal-content">
-            </div>            
+                <!-- Основное изображение товара, сначала малое, след строка большое -->
+                <a href="images/one.png" data-lightbox="product" data-title="Деревянная разделочная доска">
+                    <img src="images/one.png" alt="Деревянная разделочная доска">
+                </a>
+                <!-- Дополнительные изображения товара -->
+                <a href="images/two.png" data-lightbox="product" style="display: none;"></a>
+                <a href="images/three.png" data-lightbox="product" style="display: none;"></a>
+                <!-- Добавьте столько изображений, сколько нужно -->
+            </div>         
         </div>
     
         <!-- Второй товар -->
@@ -127,11 +124,9 @@
             var total = quantity * price;
             alert("Товар '" + productName + "' добавлен в корзину. Общая стоимость: $" + total);
         }
-        // Получаем ссылки на элементы
-        var modal = document.getElementById('modal');
-        var modalImage = document.getElementById('modal-image');
-        var galleryImages = document.querySelectorAll('.gallery-image');
 
+        src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js">
+        
         // Добавляем обработчики событий для каждого изображения
         galleryImages.forEach(function(image) {
             image.addEventListener('click', function() {
