@@ -29,14 +29,18 @@
     
         <!-- Первый товар -->
         <div class="product">
-            <img src="images/one.png" alt="Деревянная разделочная доска">
-            <h3>Деревянная разделочная доска</h3>
-            <p>Идеально подходит для нарезки овощей и фруктов.</p>
-            <p>Цена за штуку: $25</p>
-            <label for="quantity1">Количество:</label>
-            <input type="number" id="quantity1" name="quantity1" min="1" value="1" onchange="calculateTotal()">
-            <p>Общая стоимость: <span id="total1">$25</span></p>
-            <button onclick="addToCart('Деревянная разделочная доска', 25)">Добавить в корзину</button>
+            <div class="product-details">
+                <h3>Деревянная разделочная доска</h3>
+                <p>Идеально подходит для нарезки овощей и фруктов.</p>
+                <p>Цена за штуку: $25</p>
+                <label for="quantity1">Количество:</label>
+                <input type="number" id="quantity1" name="quantity1" min="1" value="1" onchange="calculateTotal()">
+                <p>Общая стоимость: <span id="total1">$25</span></p>
+                <button onclick="addToCart('Деревянная разделочная доска', 25)">Добавить в корзину</button>
+            </div>
+            <div class="product-image">
+                <img src="images/one.png" alt="Деревянная разделочная доска">
+            </div>
         </div>
     
         <!-- Второй товар -->
@@ -57,9 +61,9 @@
             <h3>Деревянная менажница с соусницей</h3>
             <p>Отличный выбор для сервировки стола.</p>
             <p>Цена за штуку: $35</p>
-            <label for="quantity2">Количество:</label>
-            <input type="number" id="quantity2" name="quantity2" min="1" value="1" onchange="calculateTotal()">
-            <p>Общая стоимость: <span id="total2">$35</span></p>
+            <label for="quantity3">Количество:</label>
+            <input type="number" id="quantity3" name="quantity3" min="1" value="1" onchange="calculateTotal()">
+            <p>Общая стоимость: <span id="total3">$35</span></p>
             <button onclick="addToCart('Деревянная менажница', 35)">Добавить в корзину</button>
         </div>
 
@@ -69,9 +73,9 @@
             <h3>Деревянная менажница с соусницей квадратная</h3>
             <p>Отличный выбор для сервировки стола.</p>
             <p>Цена за штуку: $40</p>
-            <label for="quantity2">Количество:</label>
-            <input type="number" id="quantity2" name="quantity2" min="1" value="1" onchange="calculateTotal()">
-            <p>Общая стоимость: <span id="total2">$40</span></p>
+            <label for="quantity4">Количество:</label>
+            <input type="number" id="quantity4" name="quantity4" min="1" value="1" onchange="calculateTotal()">
+            <p>Общая стоимость: <span id="total4">$40</span></p>
             <button onclick="addToCart('Деревянная менажница', 40)">Добавить в корзину</button>
         </div>
     </section>
