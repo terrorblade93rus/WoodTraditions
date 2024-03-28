@@ -1,0 +1,14 @@
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover; /* чтобы изображение занимало всю область фона */
+    background-repeat: no-repeat; /* чтобы изображение не повторялось */
+}
+
+.product {
+    display: inline-block;
+    width: 45%; /* Ширина каждого блока товара, чтобы они занимали приблизительно половину ширины экрана */
+    margin: 10px; /* Внешний отступ между блоками товаров */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+    border: 1px solid #ccc; /* Подчеркивание товарных блоков */
+    padding: 10px; /* Внутренний отступ для красивого вида */
+}
