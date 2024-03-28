@@ -41,7 +41,7 @@
                 <button onclick="addToCart('Деревянная разделочная доска', 25)">Добавить в корзину</button>
             </div>
             <div class="product-image">
-                <!-- Основное изображение товара, сначала малое, след строка большое -->
+                <!-- Основное изображение товара, сначала большое, след строка малое -->
                 <a href="images/one.png" data-lightbox="product" data-title="Деревянная разделочная доска">
                     <img src="images/one.png" alt="Деревянная разделочная доска">
                 </a>
@@ -51,7 +51,8 @@
                 <!-- Добавьте столько изображений, сколько нужно -->
             </div>         
         </div>
-    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
         <!-- Второй товар -->
         <div class="product">
             <div class="product-details">
@@ -124,8 +125,6 @@
             var total = quantity * price;
             alert("Товар '" + productName + "' добавлен в корзину. Общая стоимость: $" + total);
         }
-
-        src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js">
         
         // Добавляем обработчики событий для каждого изображения
         galleryImages.forEach(function(image) {
