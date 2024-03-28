@@ -41,6 +41,18 @@
             <div class="product-image">
                 <img src="images/one.png" alt="Деревянная разделочная доска">
             </div>
+            <div class="gallery">
+                <img src="images/one.png" alt="Image 1" class="gallery-image">
+                <img src="images/two.png" alt="Image 2" class="gallery-image">
+                <img src="images/three.png" alt="Image 3" class="gallery-image">
+                <!-- Добавьте сколько угодно изображений -->
+            </div>
+            
+            <!-- Модальное окно для отображения увеличенных изображений -->
+            <div id="modal" class="modal">
+                <span class="close">&times;</span>
+                <img id="modal-image" class="modal-content">
+            </div>            
         </div>
     
         <!-- Второй товар -->
@@ -115,6 +127,24 @@
             var total = quantity * price;
             alert("Товар '" + productName + "' добавлен в корзину. Общая стоимость: $" + total);
         }
+        // Получаем ссылки на элементы
+        var modal = document.getElementById('modal');
+        var modalImage = document.getElementById('modal-image');
+        var galleryImages = document.querySelectorAll('.gallery-image');
+
+        // Добавляем обработчики событий для каждого изображения
+        galleryImages.forEach(function(image) {
+            image.addEventListener('click', function() {
+                modal.style.display = 'block'; // Отображаем модальное окно
+                modalImage.src = this.src; // Устанавливаем изображение в модальное окно
+            });
+        });
+
+        // Добавляем обработчик события для закрытия модального окна
+        var closeBtn = document.getElementsByClassName('close')[0];
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none'; // Скрываем модальное окно при клике на кнопку закрытия
+        });
     </script>
     
     
