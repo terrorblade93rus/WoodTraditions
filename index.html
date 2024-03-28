@@ -33,7 +33,7 @@
             <p>Идеально подходит для нарезки овощей и фруктов.</p>
             <p>Цена за штуку: $25</p>
             <label for="quantity1">Количество:</label>
-            <input type="number" id="quantity1" name="quantity1" min="1" value="1" onchange="calculateTotal()">
+            <input type="number" id="quantity1" name="quantity1" min="1" value="1" onchange="calculateTotal(25, 'total1')">
             <p>Общая стоимость: <span id="total1">$25</span></p>
             <button onclick="addToCart('Деревянная разделочная доска', 25)">Добавить в корзину</button>
         </div>
@@ -44,24 +44,20 @@
             <p>Отличный выбор для сервировки стола.</p>
             <p>Цена за штуку: $30</p>
             <label for="quantity2">Количество:</label>
-            <input type="number" id="quantity2" name="quantity2" min="1" value="1" onchange="calculateTotal()">
+            <input type="number" id="quantity2" name="quantity2" min="1" value="1" onchange="calculateTotal(30, 'total2')">
             <p>Общая стоимость: <span id="total2">$30</span></p>
             <button onclick="addToCart('Деревянная менажница', 30)">Добавить в корзину</button>
         </div>
     </section>
     
+    
     <script>
-        function calculateTotal() {
-            var quantity1 = document.getElementById("quantity1").value;
-            var quantity2 = document.getElementById("quantity2").value;
-    
-            var total1 = quantity1 * 25; // Цена за штуку для первого товара
-            var total2 = quantity2 * 30; // Цена за штуку для второго товара
-    
-            document.getElementById("total1").innerText = "$" + total1;
-            document.getElementById("total2").innerText = "$" + total2;
+        function calculateTotal(price, totalId) {
+            var quantity = document.getElementById(totalId).previousElementSibling.value;
+            var total = quantity * price;
+            document.getElementById(totalId).innerText = "$" + total;
         }
-    
+        
         function addToCart(productName, price) {
             var quantity = document.getElementById("quantity1").value;
             var total = quantity * price;
