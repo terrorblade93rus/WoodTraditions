@@ -50,31 +50,25 @@
         </div>
     </section>
     
-    
-    
     <script>
         function calculateTotal() {
             var quantity1 = document.getElementById("quantity1").value;
             var quantity2 = document.getElementById("quantity2").value;
-        
+    
             var total1 = quantity1 * 25; // Цена за штуку для первого товара
             var total2 = quantity2 * 30; // Цена за штуку для второго товара
-        
+    
             document.getElementById("total1").innerText = "$" + total1;
             document.getElementById("total2").innerText = "$" + total2;
-        
-            // Обновляем общую сумму
-            var totalSum = total1 + total2;
-            document.getElementById("totalSum").innerText = "Общая сумма: $" + totalSum;
         }
-        
+    
         function addToCart(productName, price) {
             var quantity = document.getElementById("quantity1").value;
             var total = quantity * price;
             alert("Товар '" + productName + "' добавлен в корзину. Общая стоимость: $" + total);
         }
-        
     </script>
+    
     
     
 
