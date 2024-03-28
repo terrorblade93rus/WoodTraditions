@@ -2,7 +2,7 @@ body {
     background-image: url('images/background.jpg');
     background-size: cover; /* чтобы изображение занимало всю область фона */
     background-repeat: no-repeat; /* чтобы изображение не повторялось */
-    color: white; /* цвет шрифта
+    color: white; /* цвет шрифта*/
 }
 
 
