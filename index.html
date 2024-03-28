@@ -29,6 +29,7 @@
     
         <!-- Первый товар -->
         <div class="product">
+            <img src="images/one.png" alt="Деревянная разделочная доска">
             <h3>Деревянная разделочная доска</h3>
             <p>Идеально подходит для нарезки овощей и фруктов.</p>
             <p>Цена за штуку: $25</p>
@@ -40,6 +41,7 @@
     
         <!-- Второй товар -->
         <div class="product">
+            <img src="images/two.png" alt="Деревянная разделочная доска">
             <h3>Деревянная менажница</h3>
             <p>Отличный выбор для сервировки стола.</p>
             <p>Цена за штуку: $30</p>
@@ -51,6 +53,7 @@
 
         <!-- Третий товар -->
         <div class="product">
+            <img src="images/three.png" alt="Деревянная разделочная доска">
             <h3>Деревянная менажница с соусницей</h3>
             <p>Отличный выбор для сервировки стола.</p>
             <p>Цена за штуку: $35</p>
@@ -62,6 +65,7 @@
 
         <!-- Четвертый товар -->
         <div class="product">
+            <img src="images/four.png" alt="Деревянная разделочная доска">
             <h3>Деревянная менажница с соусницей квадратная</h3>
             <p>Отличный выбор для сервировки стола.</p>
             <p>Цена за штуку: $40</p>
@@ -76,12 +80,18 @@
         function calculateTotal() {
             var quantity1 = document.getElementById("quantity1").value;
             var quantity2 = document.getElementById("quantity2").value;
+            var quantity3 = document.getElementById("quantity3").value;
+            var quantity4 = document.getElementById("quantity4").value;
     
             var total1 = quantity1 * 25; // Цена за штуку для первого товара
             var total2 = quantity2 * 30; // Цена за штуку для второго товара
+            var total3 = quantity3 * 35; // Цена за штуку для третьего товара
+            var total4 = quantity4 * 40; // Цена за штуку для четвертого товара
     
             document.getElementById("total1").innerText = "$" + total1;
             document.getElementById("total2").innerText = "$" + total2;
+            document.getElementById("total3").innerText = "$" + total3;
+            document.getElementById("total4").innerText = "$" + total4;
         }
     
         function addToCart(productName, price) {
